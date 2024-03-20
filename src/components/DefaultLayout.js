@@ -1,14 +1,14 @@
 // components/DefaultLayout.js
-import React, { useState } from 'react';
-import { Layout, Menu, Button, theme } from 'antd';
+import React, { useState } from "react";
+import { Layout, Menu, Button, theme } from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   DatabaseOutlined,
   HomeOutlined,
   TransactionOutlined,
-} from '@ant-design/icons';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+} from "@ant-design/icons";
+import { Link } from "react-router-dom"; // Import Link from React Router
 
 const { Header, Sider, Content } = Layout;
 
@@ -19,17 +19,13 @@ const DefaultLayout = ({ children }) => {
   } = theme.useToken();
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <br />
-        <h1 style={{ color: 'white', textAlign: 'center' }}>POS</h1>
+        <h1 style={{ color: "white", textAlign: "center" }}>AMAR MERN</h1>
         <br />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['1']}
-        >
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item key="1" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
@@ -53,7 +49,7 @@ const DefaultLayout = ({ children }) => {
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: '16px',
+              fontSize: "16px",
               width: 64,
               height: 64,
             }}
@@ -61,7 +57,7 @@ const DefaultLayout = ({ children }) => {
         </Header>
         <Content
           style={{
-            margin: '24px 16px',
+            margin: "24px 16px",
             padding: 24,
             minHeight: 280,
             background: colorBgContainer,
